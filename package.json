@@ -1,10 +1,10 @@
 {
-  "name": "frontend-mentor-interactive-rating-component",
+  "name": "frontend-mentor-advice-generator-app",
   "version": "1.0.0",
-  "description": "A React-based star rating component that allows users to rate a product or service on a scale of one to five stars.",
+  "description": "Get personalized advice wherever you are with this advice generator app! It's got a responsive design, interactive hover states, and instant advice generation with one click.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakubjirous/interactive-rating-component.git"
+    "url": "git+https://github.com/jakubjirous/advice-generator-app.git"
   },
   "keywords": [
     "next.js",

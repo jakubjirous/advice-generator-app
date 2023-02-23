@@ -6,10 +6,10 @@ import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { QueryClient } from "@tanstack/query-core";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import React from "react";
+import React, { ReactNode, useState } from "react";
 
-export default function Providers({ children }: { children: React.ReactNode }) {
-  const [queryClient] = React.useState(
+export default function Providers({ children }: { children: ReactNode }) {
+  const [queryClient] = useState(
     () =>
       new QueryClient({
         defaultOptions: {

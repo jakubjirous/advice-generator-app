@@ -5,6 +5,7 @@ import { pxToRem } from "@/utils/unitConvertors";
  */
 const shadows = {
   outline: `0 0 ${pxToRem(1)} ${pxToRem(2)} var(--chakra-colors-bayoux-100)`,
+  hover: `0 0 ${pxToRem(40)} 0 var(--chakra-colors-aquamarine-100)`,
 };
 
 export default shadows;

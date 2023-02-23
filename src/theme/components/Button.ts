@@ -1,48 +1,58 @@
-const Button = {
+import { pxToRem } from "@/utils/unitConvertors";
+import { defineStyleConfig, keyframes } from "@chakra-ui/react";
+
+const roll = keyframes({
+  "0%": {
+    transform: "rotate(0) translateX(0)",
+  },
+  "25%": {
+    transform: `rotate(90deg) translateX(${pxToRem(-4)})`,
+  },
+  "50%": {
+    transform: "rotate(180deg) translateX(0)",
+  },
+  "75%": {
+    transform: `rotate(270deg) translateX(${pxToRem(4)})`,
+  },
+  "100%": {
+    transform: "rotate(360deg) translateX(0)",
+  },
+});
+
+const Button = defineStyleConfig({
   baseStyle: {
-    fontSize: "lg",
-    fontWeight: "bold",
-    lineHeight: "normal",
-    letterSpacing: "widest",
-    textTransform: "uppercase",
     borderRadius: "full",
     transitionProperty: "common",
     transitionDuration: "slower",
-    pt: 0.5,
-  },
-  variants: {
-    custom: {
-      bg: "orange.100",
-      color: "white",
-      h: "12",
-      w: "100%",
+    fontSize: "2xl",
+    bg: "aquamarine.100",
+    color: "bayoux.900",
+    h: "16",
+    w: "16",
 
-      _hover: {
-        bg: "white",
-        color: "orange.100",
-      },
+    _hover: {
+      boxShadow: "hover",
+    },
 
-      _active: {
-        bg: "white",
-        color: "orange.100",
-      },
+    _focus: {
+      outline: "bayoux.100",
+      boxShadow: "outline",
+    },
 
-      _focus: {
-        outline: "white",
-        boxShadow: "outline",
-      },
-
-      _disabled: {
-        bg: "grey.500",
-        color: "grey.100",
-        cursor: "not-allowed",
+    _disabled: {
+      cursor: "not-allowed",
+      boxShadow: "unset",
+      svg: {
+        animation: `${roll} 400ms linear infinite`,
       },
     },
   },
-  defaultProps: {
-    size: "md",
-    variant: "custom",
+  variants: {
+    fixed: {
+      position: "absolute",
+      bottom: "-8",
+    },
   },
-};
+});
 
 export default Button;

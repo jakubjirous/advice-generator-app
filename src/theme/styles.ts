@@ -6,8 +6,8 @@ const styles = {
     "html, body": {
       fontFamily: "body",
       fontSize: "md",
-      color: "grey.100",
-      bg: "woodsmoke.900",
+      color: "bayoux.100",
+      bg: "bayoux.900",
     },
   },
 };

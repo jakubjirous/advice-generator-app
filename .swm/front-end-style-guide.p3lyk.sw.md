@@ -2,8 +2,67 @@
 id: p3lyk
 title: Front-End Style Guide
 file_version: 1.1.2
-app_version: 1.2.4
+app_version: 1.2.7
 ---
+
+## Font Family
+
+\``@next/font`\` will automatically optimize your fonts (including custom fonts) and remove external network requests for improved privacy and performance.
+
+<br/>
+
+`📄 src/app/fonts.ts`
+
+Import the font you would like to use from @next/font/google as a function. We recommend using variable fonts `--font-manrope`<swm-token data-swm-token=":src/app/fonts.ts:4:5:8:`  variable: &quot;--font-manrope&quot;,`"/> for the best performance and flexibility.
+
+<br/>
+
+Automatically self-host any **Google Font**. Fonts are included in the deployment and served from the same domain as your deployment:
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/app/fonts.ts
+```typescript
+3      export const manrope = Manrope({
+4        variable: "--font-manrope",
+5        subsets: ["latin"],
+6        fallback: ["sans-serif"],
+7        display: "swap",
+8      });
+```
+
+<br/>
+
+<br/>
+
+> **Good to know**: Use an underscore (\_) for font names with two or more words. E.g. `Roboto Mono` should be imported as `Roboto_Mono`.
+
+<br/>
+
+<br/>
+
+Using this utility function exports a font, imports it, and applies its `classname` where needed. This ensures the font is preloaded only when it's rendered:
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/app/layout.tsx
+```tsx
+20         <html lang="en" className={manrope.variable}>
+```
+
+<br/>
+
+Finally, add the CSS variable to your Chakra UI CSS config:
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/theme/foundations/fonts.ts
+```typescript
+4      const fonts = {
+5        body: "var(--font-manrope)",
+6        heading: "var(--font-manrope)",
+7      };
+```
+
+<br/>
+
+For more informations about fonts in Next.js [visit official docs](https://beta.nextjs.org/docs/optimizing/fonts).
+
+<br/>
 
 ## Layout
 
@@ -80,24 +139,6 @@ All available font sizes across all Chakra UI custom theme.
 18       "8xl": `${pxToRem(96)}`,
 19       "9xl": `${pxToRem(128)}`,
 20     };
-```
-
-<br/>
-
-## Font Family
-
-<br/>
-
-Using Next.js' internal tooling for loading external font `Overpass` from `Google Fonts` and in the same time keeping the best performance possible.
-<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
-### 📄 src/theme/foundations/fonts.ts
-```typescript
-1      import { Manrope } from "@next/font/google";
-2      
-3      export const nextFont = Manrope({
-4        subsets: ["latin"],
-5        fallback: ["sans-serif"],
-6      });
 ```
 
 <br/>

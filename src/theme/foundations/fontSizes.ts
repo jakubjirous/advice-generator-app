@@ -10,7 +10,7 @@ const fontSizes = {
   lg: `${pxToRem(18)}`,
   xl: `${pxToRem(20)}`,
   "2xl": `${pxToRem(24)}`,
-  "3xl": `${pxToRem(30)}`,
+  "3xl": `${pxToRem(28)}`, // quote
   "4xl": `${pxToRem(36)}`,
   "5xl": `${pxToRem(48)}`,
   "6xl": `${pxToRem(60)}`,

@@ -6,7 +6,7 @@ const styles = {
     "html, body": {
       fontFamily: "body",
       fontSize: "md",
-      color: "bayoux.100",
+      color: "botticelli.100",
       bg: "bayoux.900",
     },
   },

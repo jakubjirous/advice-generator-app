@@ -1,13 +1,19 @@
 import useAdvice from "@/hooks/useAdvice";
 import { Box } from "@chakra-ui/react";
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 
 const Advice = () => {
   const { data: advice, isFetching, refetch } = useAdvice();
 
-  const handleGenerate = () => {
+  const handleGenerate = useCallback(() => {
+    if (!isFetching) {
+      refetch();
+    }
+  }, [isFetching]);
+
+  useEffect(() => {
     refetch();
-  };
+  }, []);
 
   return (
     <Box textAlign="center">
@@ -15,7 +21,9 @@ const Advice = () => {
       <br />
       <br />
       {isFetching && <>Loading...</>}
-      <button onClick={handleGenerate}>Refetch</button>
+      <button onClick={handleGenerate} disabled={isFetching}>
+        Refetch
+      </button>
     </Box>
   );
 };

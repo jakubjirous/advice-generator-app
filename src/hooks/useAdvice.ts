@@ -1,7 +1,7 @@
 import { AdviceType } from "@/app/(advice)/types";
 import delayedFetch from "@/utils/delayedFetch";
 import getRandomNumberInRange from "@/utils/getRandomNumberInRange";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 const fetchAdvice = async (): Promise<AdviceType> => {
   const response = await delayedFetch(
@@ -16,11 +16,12 @@ const fetchAdvice = async (): Promise<AdviceType> => {
   return response.json();
 };
 
-const useAdvice = () => {
+const useAdvice = (): UseQueryResult<AdviceType, Error> => {
   return useQuery<AdviceType, Error>({
     queryKey: ["advice"],
     queryFn: fetchAdvice,
     suspense: true,
+    enabled: false,
   });
 };
 

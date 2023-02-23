@@ -1,6 +1,6 @@
-import { Overpass } from "@next/font/google";
+import { Manrope } from "@next/font/google";
 
-export const nextFont = Overpass({
+export const nextFont = Manrope({
   subsets: ["latin"],
   fallback: ["sans-serif"],
 });

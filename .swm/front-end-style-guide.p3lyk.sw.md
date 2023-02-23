@@ -72,7 +72,7 @@ All available font sizes across all Chakra UI custom theme.
 10       lg: `${pxToRem(18)}`,
 11       xl: `${pxToRem(20)}`,
 12       "2xl": `${pxToRem(24)}`,
-13       "3xl": `${pxToRem(30)}`,
+13       "3xl": `${pxToRem(28)}`, // quote
 14       "4xl": `${pxToRem(36)}`,
 15       "5xl": `${pxToRem(48)}`,
 16       "6xl": `${pxToRem(60)}`,
@@ -92,9 +92,9 @@ Using Next.js' internal tooling for loading external font `Overpass` from `Googl
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 src/theme/foundations/fonts.ts
 ```typescript
-1      import { Overpass } from "@next/font/google";
+1      import { Manrope } from "@next/font/google";
 2      
-3      export const nextFont = Overpass({
+3      export const nextFont = Manrope({
 4        subsets: ["latin"],
 5        fallback: ["sans-serif"],
 6      });

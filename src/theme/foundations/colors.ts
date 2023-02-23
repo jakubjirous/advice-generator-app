@@ -4,21 +4,16 @@
 const colors = {
   transparent: "transparent",
   white: "hsl(0, 0%, 100%)",
-  orange: {
-    100: "hsl(25, 97%, 53%)",
+  botticelli: {
+    100: "hsl(193, 38%, 86%)",
   },
-  grey: {
-    100: "hsl(217, 12%, 63%)",
-    300: "hsl(219, 11%, 55%)",
-    500: "hsl(215, 18%, 19%)",
+  aquamarine: {
+    100: "hsl(150, 100%, 66%)", // button background
   },
-  blue: {
-    500: "hsl(210, 19%, 18%)",
-    700: "hsl(215, 20%, 17%)",
-    900: "hsl(215, 27%, 12%)",
-  },
-  woodsmoke: {
-    900: "hsl(228, 11%, 9%)",
+  bayoux: {
+    100: "hsl(217, 19%, 38%)", // quote color
+    500: "hsl(217, 19%, 24%)", // card background
+    900: "hsl(218, 23%, 16%)", // background
   },
 };
 

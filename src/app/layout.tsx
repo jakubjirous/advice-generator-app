@@ -1,5 +1,6 @@
 "use client";
 
+import { manrope } from "@/app/fonts";
 import theme from "@/theme";
 import { CacheProvider } from "@chakra-ui/next-js";
 import {
@@ -8,15 +9,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-import { Manrope } from "@next/font/google";
 import React from "react";
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  fallback: ["sans-serif"],
-  display: "swap",
-});
 
 export default function RootLayout({
   children,

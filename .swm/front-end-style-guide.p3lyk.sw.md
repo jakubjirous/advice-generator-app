@@ -9,8 +9,6 @@ app_version: 1.2.7
 
 \``@next/font`\` will automatically optimize your fonts (including custom fonts) and remove external network requests for improved privacy and performance.
 
-<br/>
-
 `📄 src/app/fonts.ts`
 
 Import the font you would like to use from @next/font/google as a function. We recommend using variable fonts `--font-manrope`<swm-token data-swm-token=":src/app/fonts.ts:4:5:8:`  variable: &quot;--font-manrope&quot;,`"/> for the best performance and flexibility.
@@ -61,8 +59,6 @@ Finally, add the CSS variable to your Chakra UI CSS config:
 <br/>
 
 For more informations about fonts in Next.js [visit official docs](https://beta.nextjs.org/docs/optimizing/fonts).
-
-<br/>
 
 ## Layout
 
@@ -143,7 +139,40 @@ All available font sizes across all Chakra UI custom theme.
 
 <br/>
 
+## Chakra CLI
+
+The Chakra UI CLI can be used to generate typings for your custom theme tokens, like colors, semantic tokens, component variants, etc.
+
 <br/>
+
+### Usage:
+
+To generate typings for your theme, run the `theme` script:
+
+```bash
+yarn theme
+```
+
+If you'd like to continuously generate theme typings as you're editing your theme, run the `theme:watch` script:
+
+```bash
+yarn theme:watch
+```
+
+A successful execution should output something like this:
+
+```
+yarn run v1.22.10
+$ chakra-cli tokens src/theme/index.ts
+
+Chakra UI CLI  v2.3.0 by Chakra UI
+Generate theme typings for autocomplete
+
+
+ℹ Generating chakra theme typings
+✔ Done
+✨  Done in 1.30s.
+```
 
 <br/>
 

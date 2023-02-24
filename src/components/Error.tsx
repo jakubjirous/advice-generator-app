@@ -1,9 +1,9 @@
-import Section from "@/components/Section";
-import DesktopDividerIcon from "@/theme/icons/DesktopDividerIcon";
-import DiceIcon from "@/theme/icons/DiceIcon";
-import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
-import { Heading, Hide, IconButton, Text } from "@chakra-ui/react";
-import React, { FC } from "react";
+import Section from '@/components/Section';
+import DesktopDividerIcon from '@/theme/icons/DesktopDividerIcon';
+import DiceIcon from '@/theme/icons/DiceIcon';
+import MobileDividerIcon from '@/theme/icons/MobileDividerIcon';
+import { Heading, IconButton, Text } from '@chakra-ui/react';
+import React, { FC } from 'react';
 
 interface Props {
   onClick: () => void;
@@ -43,12 +43,24 @@ const Error: FC<Props> = ({ onClick }) => {
       >
         &#8264; There was an error &#8265;
       </Heading>
-      <Hide above="md">
-        <MobileDividerIcon width="100%" height="auto" />
-      </Hide>
-      <Hide below="md">
-        <DesktopDividerIcon width="100%" height="auto" />
-      </Hide>
+      <MobileDividerIcon
+        width="100%"
+        height="auto"
+        display={{
+          base: "flex",
+          sm: "flex",
+          md: "none",
+        }}
+      />
+      <DesktopDividerIcon
+        width="100%"
+        height="auto"
+        display={{
+          base: "none",
+          sm: "none",
+          md: "flex",
+        }}
+      />
       <IconButton
         variant="fixed"
         onClick={onClick}

@@ -1,10 +1,10 @@
-import useAdvice from "@/hooks/useAdvice";
-import Section from "@/components/Section";
-import DesktopDividerIcon from "@/theme/icons/DesktopDividerIcon";
-import DiceIcon from "@/theme/icons/DiceIcon";
-import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
-import { Heading, Hide, IconButton, Show, Text } from "@chakra-ui/react";
-import React, { useCallback, useEffect } from "react";
+import Section from '@/components/Section';
+import useAdvice from '@/hooks/useAdvice';
+import DesktopDividerIcon from '@/theme/icons/DesktopDividerIcon';
+import DiceIcon from '@/theme/icons/DiceIcon';
+import MobileDividerIcon from '@/theme/icons/MobileDividerIcon';
+import { Heading, IconButton, Text } from '@chakra-ui/react';
+import React, { useCallback, useEffect } from 'react';
 
 const Advice = () => {
   const { data: advice, isFetching, refetch } = useAdvice();
@@ -51,12 +51,24 @@ const Advice = () => {
       >
         &ldquo;{advice?.slip.advice}&rdquo;
       </Heading>
-      <Hide above="md">
-        <MobileDividerIcon width="100%" height="auto" />
-      </Hide>
-      <Hide below="md">
-        <DesktopDividerIcon width="100%" height="auto" />
-      </Hide>
+      <MobileDividerIcon
+        width="100%"
+        height="auto"
+        display={{
+          base: "flex",
+          sm: "flex",
+          md: "none",
+        }}
+      />
+      <DesktopDividerIcon
+        width="100%"
+        height="auto"
+        display={{
+          base: "none",
+          sm: "none",
+          md: "flex",
+        }}
+      />
       <IconButton
         variant="fixed"
         onClick={handleGenerate}

@@ -25,7 +25,7 @@ const useAdvice = (): UseQueryResult<AdviceType, Error> => {
     initialData: {
       slip: {
         id: 1,
-        advice: "I live for this energy!",
+        advice: "Never stop coding!",
       },
     },
   });

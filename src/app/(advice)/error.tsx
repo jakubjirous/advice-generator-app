@@ -1,15 +1,13 @@
-import Section from "@/components/Section";
+"use client";
+
+import Section from "@/app/(advice)/section";
 import DesktopDividerIcon from "@/theme/icons/DesktopDividerIcon";
 import DiceIcon from "@/theme/icons/DiceIcon";
 import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
 import { Heading, IconButton, Text } from "@chakra-ui/react";
-import React, { FC } from "react";
+import React from "react";
 
-interface Props {
-  onClick: () => void;
-}
-
-const Error: FC<Props> = ({ onClick }) => {
+export default function Error({ onClick }: { onClick: () => void }) {
   return (
     <Section
       size={["sm", "sm", "md"]}
@@ -50,6 +48,4 @@ const Error: FC<Props> = ({ onClick }) => {
       />
     </Section>
   );
-};
-
-export default Error;
+}

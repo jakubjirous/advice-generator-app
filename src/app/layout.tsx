@@ -1,8 +1,5 @@
-"use client";
-
 import { manrope } from "@/app/fonts";
 import Providers from "@/app/providers";
-import { Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 
 export default function RootLayout({
@@ -15,16 +12,7 @@ export default function RootLayout({
       <head />
       <body>
         <main>
-          <Providers>
-            <Grid
-              h="100vh"
-              alignItems="center"
-              justifyContent="center"
-              p={[7, 7]}
-            >
-              <GridItem>{children}</GridItem>
-            </Grid>
-          </Providers>
+          <Providers>{children}</Providers>
         </main>
       </body>
     </html>

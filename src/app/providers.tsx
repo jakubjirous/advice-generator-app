@@ -3,9 +3,7 @@
 import theme from "@/theme";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
-import { QueryClient } from "@tanstack/query-core";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React, { ReactNode, useState } from "react";
 
 export default function Providers({ children }: { children: ReactNode }) {
@@ -22,7 +20,6 @@ export default function Providers({ children }: { children: ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
       <CacheProvider>
         <ChakraProvider theme={theme} resetCSS>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

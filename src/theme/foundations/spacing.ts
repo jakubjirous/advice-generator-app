@@ -22,7 +22,7 @@ const spacing = {
     10: `${pxToRem(40)}`,
     12: `${pxToRem(48)}`,
     14: `${pxToRem(56)}`,
-    16: `${pxToRem(64)}`,
+    16: `${pxToRem(66)}`,
     20: `${pxToRem(80)}`,
     24: `${pxToRem(96)}`,
     28: `${pxToRem(112)}`,

@@ -1,9 +1,9 @@
 "use client";
 
-import theme from '@/theme';
-import { CacheProvider } from '@chakra-ui/next-js';
-import { ChakraProvider, ColorModeScript, } from '@chakra-ui/react';
-import React from 'react';
+import { manrope } from "@/app/fonts";
+import Providers from "@/app/providers";
+import { Grid, GridItem } from "@chakra-ui/react";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -11,17 +11,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={manrope.variable}>
       <head />
       <body>
-        <CacheProvider>
-          <ChakraProvider theme={theme} resetCSS>
-            <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-
-            <h1>Advice Generator App</h1>
-
-          </ChakraProvider>
-        </CacheProvider>
+        <main>
+          <Providers>
+            <Grid
+              h="100vh"
+              alignItems="center"
+              justifyContent="center"
+              p={[7, 7]}
+            >
+              <GridItem>{children}</GridItem>
+            </Grid>
+          </Providers>
+        </main>
       </body>
     </html>
   );

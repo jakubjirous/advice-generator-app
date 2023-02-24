@@ -3,7 +3,7 @@
  */
 const fontWeights = {
   normal: 400,
-  bold: 700,
+  bold: 800,
 };
 
 export default fontWeights;

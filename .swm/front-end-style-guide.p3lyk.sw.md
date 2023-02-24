@@ -2,8 +2,63 @@
 id: p3lyk
 title: Front-End Style Guide
 file_version: 1.1.2
-app_version: 1.2.4
+app_version: 1.2.7
 ---
+
+## Font Family
+
+\``@next/font`\` will automatically optimize your fonts (including custom fonts) and remove external network requests for improved privacy and performance.
+
+`📄 src/app/fonts.ts`
+
+Import the font you would like to use from @next/font/google as a function. We recommend using variable fonts `--font-manrope`<swm-token data-swm-token=":src/app/fonts.ts:4:5:8:`  variable: &quot;--font-manrope&quot;,`"/> for the best performance and flexibility.
+
+<br/>
+
+Automatically self-host any **Google Font**. Fonts are included in the deployment and served from the same domain as your deployment:
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/app/fonts.ts
+```typescript
+3      export const manrope = Manrope({
+4        variable: "--font-manrope",
+5        subsets: ["latin"],
+6        fallback: ["sans-serif"],
+7        display: "swap",
+8      });
+```
+
+<br/>
+
+<br/>
+
+> **Good to know**: Use an underscore (\_) for font names with two or more words. E.g. `Roboto Mono` should be imported as `Roboto_Mono`.
+
+<br/>
+
+<br/>
+
+Using this utility function exports a font, imports it, and applies its `classname` where needed. This ensures the font is preloaded only when it's rendered:
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/app/layout.tsx
+```tsx
+14         <html lang="en" className={manrope.variable}>
+```
+
+<br/>
+
+Finally, add the CSS variable to your Chakra UI CSS config:
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/theme/foundations/fonts.ts
+```typescript
+4      const fonts = {
+5        body: "var(--font-manrope)",
+6        heading: "var(--font-manrope)",
+7      };
+```
+
+<br/>
+
+For more informations about fonts in Next.js [visit official docs](https://beta.nextjs.org/docs/optimizing/fonts).
 
 ## Layout
 
@@ -38,26 +93,34 @@ Custom colours available as a part of Chakra UI custom theme.
 4      const colors = {
 5        transparent: "transparent",
 6        white: "hsl(0, 0%, 100%)",
-7        orange: {
-8          100: "hsl(25, 97%, 53%)",
+7        botticelli: {
+8          100: "hsl(193, 38%, 86%)",
 9        },
-10       grey: {
-11         100: "hsl(217, 12%, 63%)",
-12         300: "hsl(219, 11%, 55%)",
-13         500: "hsl(215, 18%, 19%)",
-14       },
-15       blue: {
-16         500: "hsl(210, 19%, 18%)",
-17         700: "hsl(215, 20%, 17%)",
-18         900: "hsl(215, 27%, 12%)",
-19       },
-20       woodsmoke: {
-21         900: "hsl(228, 11%, 9%)",
-22       },
-23     };
+10       aquamarine: {
+11         100: "hsl(150, 100%, 66%)",
+12       },
+13       bayoux: {
+14         100: "hsl(217, 19%, 38%)",
+15         500: "hsl(217, 19%, 24%)",
+16         900: "hsl(218, 23%, 16%)",
+17       },
+18     };
 ```
 
 <br/>
+
+Here is a brief explanation of the usage:
+
+*   `botticelli`<swm-token data-swm-token=":src/theme/foundations/colors.ts:7:1:1:`  botticelli: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:8:1:1:`    100: &quot;hsl(193, 38%, 86%)&quot;,`"/> = quote color
+    
+*   `aquamarine`<swm-token data-swm-token=":src/theme/foundations/colors.ts:10:1:1:`  aquamarine: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:11:10:10:`    100: &quot;hsl(150, 100%, 66%)&quot;,`"/>\= button background
+    
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:14:1:1:`    100: &quot;hsl(217, 19%, 38%)&quot;,`"/> = quote color
+    
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`500`<swm-token data-swm-token=":src/theme/foundations/colors.ts:15:1:1:`    500: &quot;hsl(217, 19%, 24%)&quot;,`"/>\= card background
+    
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`900`<swm-token data-swm-token=":src/theme/foundations/colors.ts:16:1:1:`    900: &quot;hsl(218, 23%, 16%)&quot;,`"/> = body background
+    
 
 ## Typography
 
@@ -77,7 +140,7 @@ All available font sizes across all Chakra UI custom theme.
 10       lg: `${pxToRem(18)}`,
 11       xl: `${pxToRem(20)}`,
 12       "2xl": `${pxToRem(24)}`,
-13       "3xl": `${pxToRem(30)}`,
+13       "3xl": `${pxToRem(28)}`,
 14       "4xl": `${pxToRem(36)}`,
 15       "5xl": `${pxToRem(48)}`,
 16       "6xl": `${pxToRem(60)}`,
@@ -89,28 +152,44 @@ All available font sizes across all Chakra UI custom theme.
 
 <br/>
 
-## Font Family
+Here is a brief explanation of the usage:
 
-<br/>
+*   `3xl`<swm-token data-swm-token=":src/theme/foundations/fontSizes.ts:13:2:2:`  &quot;3xl&quot;: `${pxToRem(28)}`,`"/>\= quote
+    
 
-Using Next.js' internal tooling for loading external font `Overpass` from `Google Fonts` and in the same time keeping the best performance possible.
-<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
-### 📄 src/theme/foundations/fonts.ts
-```typescript
-1      import { Overpass } from "@next/font/google";
-2      
-3      export const nextFont = Overpass({
-4        subsets: ["latin"],
-5        fallback: ["sans-serif"],
-6      });
+## Chakra CLI
+
+The Chakra UI CLI can be used to generate typings for your custom theme tokens, like colors, semantic tokens, component variants, etc.
+
+### Usage:
+
+To generate typings for your theme, run the `theme` script:
+
+```bash
+yarn theme
+```
+
+If you'd like to continuously generate theme typings as you're editing your theme, run the `theme:watch` script:
+
+```bash
+yarn theme:watch
+```
+
+A successful execution should output something like this:
+
+```
+yarn run v1.22.10
+$ chakra-cli tokens src/theme/index.ts
+
+Chakra UI CLI  v2.3.0 by Chakra UI
+Generate theme typings for autocomplete
+
+
+ℹ Generating chakra theme typings
+✔ Done
+✨  Done in 1.30s.
 ```
 
 <br/>
 
-<br/>
-
-<br/>
-
-<br/>
-
-This file was generated by Swimm. [Click here to view it in the app](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBaW50ZXJhY3RpdmUtcmF0aW5nLWNvbXBvbmVudCUzQSUzQWpha3Viamlyb3Vz/docs/p3lyk).
+This file was generated by Swimm. [Click here to view it in the app](https://app.swimm.io/repos/Z2l0aHViJTNBJTNBYWR2aWNlLWdlbmVyYXRvci1hcHAlM0ElM0FqYWt1Ymppcm91cw==/docs/p3lyk).

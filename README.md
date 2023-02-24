@@ -31,14 +31,14 @@ Users should be able to:
 ### Screenshots
 
 <p align="center"> 
-  <img src="public/assets/" alt="solution screenshot">
-  <em>solution screenshot</em>
+  <img src="public/assets/screenshot.png" alt="advice generator app">
+  <em>advice generator app</em>
 </p>
 
 ### Links
 
-- Solution URL: [GitHub](...)
-- Live Site URL: [Vercel](...)
+- Solution URL: [GitHub](https://github.com/jakubjirous/advice-generator-app/)
+- Live Site URL: [Vercel](https://advice-generator-app-jakubjirous.vercel.app/)
 
 ---
 
@@ -49,20 +49,24 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- CSS Grid 
 - Mobile-first workflow
-- [React](https://reactjs.org/) – JS library
 - [Next.js](https://nextjs.org/) – React framework
+- [React](https://reactjs.org/) – JS library
+- [TanStack Query (FKA React Query)](https://tanstack.com/query/latest) – Data fetching library
 - [Chakra UI](https://chakra-ui.com/) – For styles
 
 ### What I learned
 
-...
+In this Code Challenge, I expanded my knowledge of web development by incorporating the Tanstack React Query fetching library with Next.js (v13) to create an advice generator app. 
+
+This project allowed me to develop practical skills in creating responsive and dynamic user interfaces using the latest technologies.
 
 ### Useful resources
 
 - [Next.js Documentation](https://beta.nextjs.org/docs)
 - [React Documentation](https://beta.reactjs.org/)
+- [TanStack Query Documentation](https://tanstack.com/query/latest/docs/react/overview)
 - [Chakra UI Documentation](https://chakra-ui.com/getting-started)
 
 ---

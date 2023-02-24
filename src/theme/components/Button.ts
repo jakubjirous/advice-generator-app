@@ -34,13 +34,13 @@ const Button = defineStyleConfig({
       boxShadow: "hover",
     },
 
-    _focus: {
-      outline: "bayoux.100",
+    _focusVisible: {
       boxShadow: "outline",
+      outline: `${pxToRem(1)} solid transparent`,
     },
 
     _disabled: {
-      cursor: "not-allowed",
+      cursor: "wait",
       boxShadow: "unset",
       svg: {
         animation: `${roll} 400ms linear infinite`,

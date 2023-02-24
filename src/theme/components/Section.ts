@@ -11,11 +11,15 @@ const Section = {
   sizes: {
     sm: {
       p: 8,
+      pb: 14,
       maxW: "xs",
+      aspectRatio: "36 / 38",
     },
     md: {
       p: 10,
-      maxW: "md",
+      pb: 16,
+      maxW: "xl",
+      aspectRatio: "58 / 36",
     },
   },
   defaultProps: {

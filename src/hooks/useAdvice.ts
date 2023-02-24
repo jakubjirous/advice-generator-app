@@ -6,7 +6,7 @@ import { useQuery, UseQueryResult } from "@tanstack/react-query";
 const fetchAdvice = async (): Promise<AdviceType> => {
   const response = await delayedFetch(
     `${process.env.apiUrl}/advice`,
-    getRandomNumberInRange(500, 2500)
+    getRandomNumberInRange(250, 2000)
   );
 
   if (!response.ok) {
@@ -22,6 +22,12 @@ const useAdvice = (): UseQueryResult<AdviceType, Error> => {
     queryFn: fetchAdvice,
     suspense: true,
     enabled: false,
+    initialData: {
+      slip: {
+        id: 1,
+        advice: "I live for this energy!",
+      },
+    },
   });
 };
 

@@ -1,24 +1,15 @@
-import useAdvice from "@/hooks/useAdvice";
 import Section from "@/components/Section";
 import DesktopDividerIcon from "@/theme/icons/DesktopDividerIcon";
 import DiceIcon from "@/theme/icons/DiceIcon";
 import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
-import { Heading, Hide, IconButton, Show, Text } from "@chakra-ui/react";
-import React, { useCallback, useEffect } from "react";
+import { Heading, Hide, IconButton, Text } from "@chakra-ui/react";
+import React, { FC } from "react";
 
-const Advice = () => {
-  const { data: advice, isFetching, refetch } = useAdvice();
+interface Props {
+  onClick: () => void;
+}
 
-  const handleGenerate = useCallback(() => {
-    if (!isFetching) {
-      refetch();
-    }
-  }, [isFetching]);
-
-  useEffect(() => {
-    refetch();
-  }, []);
-
+const Error: FC<Props> = ({ onClick }) => {
   return (
     <Section
       size={{ base: "sm", sm: "sm", md: "md" }}
@@ -34,8 +25,9 @@ const Advice = () => {
           sm: "sm",
           md: "md",
         }}
+        variant="error"
       >
-        Advice #{advice?.slip.id}
+        Try again
       </Text>
       <Heading
         as="h1"
@@ -49,7 +41,7 @@ const Advice = () => {
           md: "md",
         }}
       >
-        &ldquo;{advice?.slip.advice}&rdquo;
+        &#8264; There was an error &#8265;
       </Heading>
       <Hide above="md">
         <MobileDividerIcon width="100%" height="auto" />
@@ -59,13 +51,12 @@ const Advice = () => {
       </Hide>
       <IconButton
         variant="fixed"
-        onClick={handleGenerate}
-        isDisabled={isFetching}
+        onClick={onClick}
         icon={<DiceIcon />}
-        aria-label="Generate advice"
+        aria-label="Try again"
       />
     </Section>
   );
 };
 
-export default Advice;
+export default Error;

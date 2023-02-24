@@ -6,12 +6,6 @@ const Heading = defineStyleConfig({
     lineHeight: "short",
     letterSpacing: "normal",
     color: "botticelli.100",
-    _before: {
-      content: `"\\201C"`,
-    },
-    _after: {
-      content: `"\\201D"`,
-    },
   },
   sizes: {
     sm: {

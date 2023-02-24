@@ -16,6 +16,11 @@ const Text = defineStyleConfig({
       fontSize: "md",
     },
   },
+  variants: {
+    error: {
+      color: "red.500",
+    },
+  },
   defaultProps: {
     size: "sm",
   },

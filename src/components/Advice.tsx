@@ -1,10 +1,10 @@
-import Section from '@/components/Section';
-import useAdvice from '@/hooks/useAdvice';
-import DesktopDividerIcon from '@/theme/icons/DesktopDividerIcon';
-import DiceIcon from '@/theme/icons/DiceIcon';
-import MobileDividerIcon from '@/theme/icons/MobileDividerIcon';
-import { Heading, IconButton, Text } from '@chakra-ui/react';
-import React, { useCallback, useEffect } from 'react';
+import Section from "@/components/Section";
+import useAdvice from "@/hooks/useAdvice";
+import DesktopDividerIcon from "@/theme/icons/DesktopDividerIcon";
+import DiceIcon from "@/theme/icons/DiceIcon";
+import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
+import { Heading, IconButton, Text } from "@chakra-ui/react";
+import React, { useCallback, useEffect } from "react";
 
 const Advice = () => {
   const { data: advice, isFetching, refetch } = useAdvice();
@@ -21,53 +21,33 @@ const Advice = () => {
 
   return (
     <Section
-      size={{ base: "sm", sm: "sm", md: "md" }}
-      gap={{ base: "4", sm: "4", md: "8" }}
+      size={["sm", "sm", "md"]}
+      gap={["4", "4", "8"]}
       display="flex"
       flexDirection="column"
       alignItems="center"
       textAlign="center"
     >
-      <Text
-        size={{
-          base: "sm",
-          sm: "sm",
-          md: "md",
-        }}
-      >
-        Advice #{advice?.slip.id}
-      </Text>
+      <Text size={["sm", "sm", "md"]}>Advice #{advice?.slip.id}</Text>
       <Heading
         as="h1"
         flex="1"
         display="flex"
         alignItems="center"
         justifyContent="center"
-        size={{
-          base: "sm",
-          sm: "sm",
-          md: "md",
-        }}
+        size={["sm", "sm", "md"]}
       >
         &ldquo;{advice?.slip.advice}&rdquo;
       </Heading>
       <MobileDividerIcon
         width="100%"
         height="auto"
-        display={{
-          base: "flex",
-          sm: "flex",
-          md: "none",
-        }}
+        display={["flex", "flex", "none"]}
       />
       <DesktopDividerIcon
         width="100%"
         height="auto"
-        display={{
-          base: "none",
-          sm: "none",
-          md: "flex",
-        }}
+        display={["none", "none", "flex"]}
       />
       <IconButton
         variant="fixed"

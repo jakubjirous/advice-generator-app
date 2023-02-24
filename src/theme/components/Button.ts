@@ -1,23 +1,6 @@
+import { roll } from "@/theme/foundations/keyframes";
 import { pxToRem } from "@/utils/unitConvertors";
-import { defineStyleConfig, keyframes } from "@chakra-ui/react";
-
-const roll = keyframes({
-  "0%": {
-    transform: "rotate(0) translateX(0)",
-  },
-  "25%": {
-    transform: `rotate(90deg) translateX(${pxToRem(-4)})`,
-  },
-  "50%": {
-    transform: "rotate(180deg) translateX(0)",
-  },
-  "75%": {
-    transform: `rotate(270deg) translateX(${pxToRem(4)})`,
-  },
-  "100%": {
-    transform: "rotate(360deg) translateX(0)",
-  },
-});
+import { defineStyleConfig } from "@chakra-ui/react";
 
 const Button = defineStyleConfig({
   baseStyle: {

@@ -20,10 +20,7 @@ export default function RootLayout({
               h="100vh"
               alignItems="center"
               justifyContent="center"
-              p={{
-                base: 7,
-                sm: 7,
-              }}
+              p={[7, 7]}
             >
               <GridItem>{children}</GridItem>
             </Grid>

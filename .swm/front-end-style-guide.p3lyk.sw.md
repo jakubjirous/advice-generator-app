@@ -97,12 +97,12 @@ Custom colours available as a part of Chakra UI custom theme.
 8          100: "hsl(193, 38%, 86%)",
 9        },
 10       aquamarine: {
-11         100: "hsl(150, 100%, 66%)", // button background
+11         100: "hsl(150, 100%, 66%)",
 12       },
 13       bayoux: {
-14         100: "hsl(217, 19%, 38%)", // quote color
-15         500: "hsl(217, 19%, 24%)", // card background
-16         900: "hsl(218, 23%, 16%)", // background
+14         100: "hsl(217, 19%, 38%)",
+15         500: "hsl(217, 19%, 24%)",
+16         900: "hsl(218, 23%, 16%)",
 17       },
 18     };
 ```
@@ -113,13 +113,13 @@ Here is a brief explanation of the usage:
 
 *   `botticelli`<swm-token data-swm-token=":src/theme/foundations/colors.ts:7:1:1:`  botticelli: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:8:1:1:`    100: &quot;hsl(193, 38%, 86%)&quot;,`"/> = quote color
     
-*   `aquamarine`<swm-token data-swm-token=":src/theme/foundations/colors.ts:10:1:1:`  aquamarine: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:11:1:1:`    100: &quot;hsl(150, 100%, 66%)&quot;, // button background`"/> = button background
+*   `aquamarine`<swm-token data-swm-token=":src/theme/foundations/colors.ts:10:1:1:`  aquamarine: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:11:10:10:`    100: &quot;hsl(150, 100%, 66%)&quot;,`"/>\= button background
     
-*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:14:1:1:`    100: &quot;hsl(217, 19%, 38%)&quot;, // quote color`"/> = quote color
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:14:1:1:`    100: &quot;hsl(217, 19%, 38%)&quot;,`"/> = quote color
     
-*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`500`<swm-token data-swm-token=":src/theme/foundations/colors.ts:15:1:1:`    500: &quot;hsl(217, 19%, 24%)&quot;, // card background`"/> = card background
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.= card background
     
-*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`900`<swm-token data-swm-token=":src/theme/foundations/colors.ts:16:1:1:`    900: &quot;hsl(218, 23%, 16%)&quot;, // background`"/> = body background
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`900`<swm-token data-swm-token=":src/theme/foundations/colors.ts:16:1:1:`    900: &quot;hsl(218, 23%, 16%)&quot;,`"/> = body background
     
 
 ## Typography
@@ -140,7 +140,7 @@ All available font sizes across all Chakra UI custom theme.
 10       lg: `${pxToRem(18)}`,
 11       xl: `${pxToRem(20)}`,
 12       "2xl": `${pxToRem(24)}`,
-13       "3xl": `${pxToRem(28)}`, // quote
+13       "3xl": `${pxToRem(28)}`,
 14       "4xl": `${pxToRem(36)}`,
 15       "5xl": `${pxToRem(48)}`,
 16       "6xl": `${pxToRem(60)}`,
@@ -154,7 +154,7 @@ All available font sizes across all Chakra UI custom theme.
 
 Here is a brief explanation of the usage:
 
-*   `3xl`<swm-token data-swm-token=":src/theme/foundations/fontSizes.ts:13:2:2:`  &quot;3xl&quot;: `${pxToRem(28)}`, // quote`"/>\= quote
+*   `3xl`<swm-token data-swm-token=":src/theme/foundations/fontSizes.ts:13:2:2:`  &quot;3xl&quot;: `${pxToRem(28)}`,`"/>\= quote
     
 
 ## Chakra CLI

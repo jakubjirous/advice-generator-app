@@ -22,12 +22,6 @@ const useAdvice = (): UseQueryResult<AdviceType, Error> => {
     queryFn: fetchAdvice,
     suspense: true,
     enabled: false,
-    initialData: {
-      slip: {
-        id: 1,
-        advice: "Never stop coding!",
-      },
-    },
   });
 };
 

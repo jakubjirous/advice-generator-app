@@ -115,8 +115,6 @@ Here is a brief explanation of the usage:
     
 *   `aquamarine`<swm-token data-swm-token=":src/theme/foundations/colors.ts:10:1:1:`  aquamarine: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:11:1:1:`    100: &quot;hsl(150, 100%, 66%)&quot;,`"/> = button background
     
-*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:14:1:1:`    100: &quot;hsl(217, 19%, 38%)&quot;,`"/> = quote color
-    
 *   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>. `500`<swm-token data-swm-token=":src/theme/foundations/colors.ts:15:1:1:`    500: &quot;hsl(217, 19%, 24%)&quot;,`"/>\= card background
     
 *   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`900`<swm-token data-swm-token=":src/theme/foundations/colors.ts:16:1:1:`    900: &quot;hsl(218, 23%, 16%)&quot;,`"/> = body background

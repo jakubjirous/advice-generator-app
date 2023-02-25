@@ -1,23 +1,37 @@
-import Section from "@/components/Section";
-import useAdvice from "@/hooks/useAdvice";
+"use client";
+
+import Section from "@/app/(advice)/section";
+import { fetchAdvice } from "@/app/(fetch)/fetchAdvice";
+import { AdviceType } from "@/app/(fetch)/types";
 import DesktopDividerIcon from "@/theme/icons/DesktopDividerIcon";
 import DiceIcon from "@/theme/icons/DiceIcon";
 import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
 import { Heading, IconButton, Text } from "@chakra-ui/react";
-import React, { useCallback, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import React, { useCallback } from "react";
 
-const Advice = () => {
-  const { data: advice, isFetching, refetch } = useAdvice();
+export default function Advice({
+  initialAdvice,
+}: {
+  initialAdvice: AdviceType;
+}) {
+  const {
+    data: advice,
+    isFetching,
+    refetch,
+  } = useQuery({
+    queryKey: ["advice"],
+    queryFn: fetchAdvice,
+    initialData: initialAdvice,
+    suspense: true,
+    enabled: false,
+  });
 
   const handleGenerate = useCallback(() => {
     if (!isFetching) {
       refetch();
     }
   }, [isFetching]);
-
-  useEffect(() => {
-    refetch();
-  }, []);
 
   return (
     <Section
@@ -58,6 +72,4 @@ const Advice = () => {
       />
     </Section>
   );
-};
-
-export default Advice;
+}

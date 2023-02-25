@@ -1,25 +1,9 @@
-"use client";
+import AdviceBoundary from "@/app/(advice)/adviceBoundary";
+import { fetchAdvice } from "@/app/(fetch)/fetchAdvice";
+import React from "react";
 
-import Loading from "@/app/(advice)/loading";
-import Advice from "@/components/Advice";
-import Error from "@/components/Error";
-import { useQueryErrorResetBoundary } from "@tanstack/react-query";
-import React, { Suspense } from "react";
-import { ErrorBoundary } from "react-error-boundary";
+export default async function Page() {
+  const initialAdvice = await fetchAdvice();
 
-export default function Page() {
-  const { reset } = useQueryErrorResetBoundary();
-
-  return (
-    <ErrorBoundary
-      onReset={reset}
-      fallbackRender={({ resetErrorBoundary }) => (
-        <Error onClick={() => resetErrorBoundary()} />
-      )}
-    >
-      <Suspense fallback={<Loading />}>
-        <Advice />
-      </Suspense>
-    </ErrorBoundary>
-  );
+  return <AdviceBoundary initialAdvice={initialAdvice} />;
 }

@@ -41,7 +41,7 @@ Using this utility function exports a font, imports it, and applies its `classna
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 src/app/layout.tsx
 ```tsx
-14         <html lang="en" className={manrope.variable}>
+11         <html lang="en" className={manrope.variable}>
 ```
 
 <br/>
@@ -113,11 +113,11 @@ Here is a brief explanation of the usage:
 
 *   `botticelli`<swm-token data-swm-token=":src/theme/foundations/colors.ts:7:1:1:`  botticelli: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:8:1:1:`    100: &quot;hsl(193, 38%, 86%)&quot;,`"/> = quote color
     
-*   `aquamarine`<swm-token data-swm-token=":src/theme/foundations/colors.ts:10:1:1:`  aquamarine: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:11:1:1:`    100: &quot;hsl(150, 100%, 66%)&quot;, // button background`"/> = button background
+*   `aquamarine`<swm-token data-swm-token=":src/theme/foundations/colors.ts:10:1:1:`  aquamarine: {`"/> = button background
     
 *   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`100`<swm-token data-swm-token=":src/theme/foundations/colors.ts:14:1:1:`    100: &quot;hsl(217, 19%, 38%)&quot;,`"/> = quote color
     
-*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`500`<swm-token data-swm-token=":src/theme/foundations/colors.ts:15:1:1:`    500: &quot;hsl(217, 19%, 24%)&quot;, // card background`"/> = card background
+*   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>. = card background
     
 *   `bayoux`<swm-token data-swm-token=":src/theme/foundations/colors.ts:13:1:1:`  bayoux: {`"/>.`900`<swm-token data-swm-token=":src/theme/foundations/colors.ts:16:1:1:`    900: &quot;hsl(218, 23%, 16%)&quot;,`"/> = body background
     

@@ -9,11 +9,7 @@ import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
 
-export default function AdviceBoundary({
-  initialAdvice,
-}: {
-  initialAdvice: AdviceType;
-}) {
+const AdviceBoundary = ({ initialAdvice }: { initialAdvice: AdviceType }) => {
   const { reset } = useQueryErrorResetBoundary();
 
   return (
@@ -28,4 +24,6 @@ export default function AdviceBoundary({
       </Suspense>
     </ErrorBoundary>
   );
-}
+};
+
+export default AdviceBoundary;

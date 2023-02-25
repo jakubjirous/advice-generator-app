@@ -10,11 +10,7 @@ import { Heading, IconButton, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import React, { useCallback } from "react";
 
-export default function Advice({
-  initialAdvice,
-}: {
-  initialAdvice: AdviceType;
-}) {
+const Advice = ({ initialAdvice }: { initialAdvice: AdviceType }) => {
   const {
     data: advice,
     isFetching,
@@ -72,4 +68,6 @@ export default function Advice({
       />
     </Section>
   );
-}
+};
+
+export default Advice;

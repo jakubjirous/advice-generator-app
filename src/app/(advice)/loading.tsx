@@ -7,7 +7,7 @@ import { Box } from "@chakra-ui/react";
 const rollAnimation = `${roll} 400ms linear infinite`;
 const pulseAnimation = `${pulse} 2s linear infinite`;
 
-export default function Loading() {
+const Loading = () => {
   return (
     <Box
       display="flex"
@@ -24,4 +24,6 @@ export default function Loading() {
       <DiceIcon animation={rollAnimation} />
     </Box>
   );
-}
+};
+
+export default Loading;

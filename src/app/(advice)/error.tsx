@@ -7,7 +7,7 @@ import MobileDividerIcon from "@/theme/icons/MobileDividerIcon";
 import { Heading, IconButton, Text } from "@chakra-ui/react";
 import React from "react";
 
-export default function Error({ onClick }: { onClick: () => void }) {
+const Error = ({ onClick }: { onClick: () => void }) => {
   return (
     <Section
       size={["sm", "sm", "md"]}
@@ -48,4 +48,6 @@ export default function Error({ onClick }: { onClick: () => void }) {
       />
     </Section>
   );
-}
+};
+
+export default Error;

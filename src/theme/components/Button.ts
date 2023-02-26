@@ -33,7 +33,8 @@ const Button = defineStyleConfig({
   variants: {
     fixed: {
       position: "absolute",
-      bottom: "-8",
+      bottom: 0,
+      transform: "translateY(var(--chakra-space-8))",
     },
   },
 });

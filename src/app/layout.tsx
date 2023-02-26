@@ -2,11 +2,7 @@ import { manrope } from "@/app/fonts";
 import Providers from "@/app/providers";
 import React from "react";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={manrope.variable}>
       <head />
@@ -17,4 +13,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

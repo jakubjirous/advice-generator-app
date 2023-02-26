@@ -1,4 +1,4 @@
-export default function Head() {
+const Head = () => {
   return (
     <>
       <title>Frontend Mentor | Advice Generator App</title>
@@ -10,4 +10,6 @@ export default function Head() {
       <link rel="icon" href="/assets/favicon.ico" />
     </>
   );
-}
+};
+
+export default Head;
